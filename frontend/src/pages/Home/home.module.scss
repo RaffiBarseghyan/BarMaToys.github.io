@@ -1,0 +1,68 @@
+@import "../../assets/styles/variables.scss";
+
+@font-face {
+  font-family: "vag-rounded-std-bold";
+  src: url("../../assets/fonts/VAGRoundedStd-Bold.otf") format("truetype");
+
+}
+
+@font-face {
+  font-family: meka;
+  src: url("../../assets/fonts/BrabionU-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: tahoma-bold;
+  src: url("../../assets/fonts/ofont.ru_Tahoma.ttf") format("truetype");
+
+}
+@font-face {
+  font-family: Billy;
+  src: url("../../assets/fonts/BillyBolt.ttf") format("truetype");
+
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bigBox {
+  background-color: #fff !important;
+  padding-bottom: 588px;
+}
+
+.bigbigBox {
+  background-image: url("../../assets/images/hp-season-of-wonder-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
+
+
+@media (min-width: 1200px){
+.bigBox{
+    max-width: 1140px;
+}
+}
+
+////////////////////////////////////////
+
+.basketButton {
+  width: 140px;
+  min-height: 50px;
+  background: $color-green;
+  border-radius: 10px;
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  transition: 0.5s;
+}
+
+.basketButton:hover {
+  background: $color-red;
+    transition: 0.5s;
+
+}

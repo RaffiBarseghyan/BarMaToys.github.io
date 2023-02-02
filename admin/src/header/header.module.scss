@@ -1,0 +1,111 @@
+.bgColor {
+  background-color: #0d5d9c !important;
+}
+
+.linkStyle {
+  font-family: "vag-rounded-std-bold", "tahoma-bold", sans-serif !important;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 41px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #ffffff !important;
+}
+
+.headerUl1 {
+  min-height: 105px;
+  display: flex;
+  align-items: center;
+}
+
+.search > input {
+  width: 350px;
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+.search > button {
+  color: #fff;
+  border-color: #fff;
+  border-top-left-radius: 0px !important;
+  border-bottom-left-radius: 0px !important;
+  border-left-color: rgba(255, 255, 255, 0);
+}
+
+.search > button:hover {
+  background-color: #fff !important;
+  color: #0d5d9c !important;
+}
+
+.language {
+  min-height: 40px;
+  margin-top: 10px;
+  color: #0d5d9c;
+}
+
+.bgColor1 {
+  background-color: #407ec9 !important;
+}
+
+.linkStyle1 {
+  font-family: "vag-rounded-std-bold", "tahoma-bold", sans-serif !important;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 41px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #ffffff !important;
+}
+
+.headerUl1 {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.linkStyle1 {
+  border-radius: 23px;
+  transition: 0.5s;
+}
+.linkStyle1:hover {
+  color: #407ec9 !important;
+  background-color: #fff;
+  transition: 0.5s;
+}
+
+.delivery{
+    font-family: "vag-rounded-std-bold", "tahoma-bold", sans-serif !important;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 41px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    
+}
+
+.dropdownBlock{
+  display: none;
+}
+
+.dropdownLi:hover .dropdownBlock{
+  display: block;
+}
+
+
+
+@media only screen and (max-width: 640px) {
+    .search > input {
+        width: 250px;
+        height: 38px;
+    }
+    .bgColor1 li > a {
+        font-family: "vag-rounded-std-bold", "tahoma-bold", sans-serif !important;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 41px;
+        letter-spacing: 0.04em;
+        text-align: center;
+        color: #ffffff !important;
+      }
+  }
+  
