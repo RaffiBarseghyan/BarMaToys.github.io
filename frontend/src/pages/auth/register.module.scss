@@ -1,4 +1,4 @@
-@import '../../assets/styles/variables.scss';
+@import "../../assets/styles/variables.scss";
 
 @font-face {
   font-family: "vag-rounded-std-bold";
@@ -61,7 +61,6 @@
   margin-left: 8px;
 }
 
-
 .md_textbox1 {
   position: relative;
 }
@@ -78,14 +77,6 @@
   font-size: 16px;
 }
 
-.md_textbox1 :is(label, span) {
-  position: absolute;
-  top: 50%;
-  translate: 0 -50%;
-  color: #888888;
-  pointer-events: none;
-  transition: 0.3s;
-}
 .md_textbox1 label {
   left: 10px;
   translate: 0 -50%;
@@ -108,7 +99,6 @@
   translate: 0 -46px;
   margin-left: 8px;
 }
-
 
 .md_textbox2 {
   position: relative;
@@ -157,7 +147,6 @@
   margin-left: 8px;
 }
 
-
 .md_textbox3 {
   position: relative;
 }
@@ -205,8 +194,11 @@
   margin-left: 8px;
 }
 
-
-
+.phone {
+  width: 260px !important;
+  height: 56px !important;
+  margin-left: 16px;
+}
 
 .btn_icon {
   width: 140px;
@@ -225,4 +217,54 @@
 .btn_icon:hover {
   background: $color-blue;
   transition: 0.5s;
+}
+
+.md_textbox1 > select {
+  height: 56px;
+  width: 260px;
+  padding-left: 16px;
+  border: 2px solid #888888;
+  border-radius: 8px;
+  outline: none;
+  background: transparent;
+  color: #000000;
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif;
+  font-size: 16px;
+}
+.md_textbox1 :is(label, span) {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  color: #888888;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.md_textbox1 > :is(input:focus, .has_value) {
+  border-color: $color-blue;
+}
+.md_textbox1 > :is(input:focus, .has_value) ~ span {
+  color: #f9f9f9;
+}
+.md_textbox1 > :is(input:focus, .has_value) ~ label {
+  background: #ffffff;
+  color: rgba(0, 0, 0, 0.75);
+  translate: 0 -46px;
+  margin-left: 8px;
+}
+
+.phone > input {
+  height: 56px !important;
+  width: 260px !important;
+  border: 2px solid #888888 !important;
+  border-radius: 8px !important;
+  outline: none;
+  background: transparent;
+  color: #000000;
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif;
+  font-size: 16px;
+}
+
+.p{
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif;
 }

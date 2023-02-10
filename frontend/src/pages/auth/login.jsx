@@ -1,5 +1,7 @@
 import axios from "axios";
 import React, { useRef, useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
+import i18next from "i18next";
 import {
   useRive,
   useStateMachineInput,
@@ -20,6 +22,15 @@ const LOGIN_TEXT = "Login";
  * @param riveProps
  */
 const LoginFormComponent = (riveProps = {}) => {
+
+  const { t, i18n } = useTranslation();
+
+  const onChange = (event) => {
+    i18next.changeLanguage(event.target.value);
+    localStorage.setItem("lang", event.target.value);
+  };
+
+
   const { rive: riveInstance, RiveComponent } = useRive({
     src: "2244-4437-animated-login-screen.riv",
     stateMachines: STATE_MACHINE_NAME,
@@ -106,8 +117,10 @@ const LoginFormComponent = (riveProps = {}) => {
           text: "You have been logged-in successfully",
           type: "success",
         });
+
+
       }
-      this.myFormRef.reset();
+      // this.myFormRef.reset();
     });
   };
 
@@ -177,3 +190,5 @@ const LoginFormComponent = (riveProps = {}) => {
 };
 
 export default LoginFormComponent;
+
+
