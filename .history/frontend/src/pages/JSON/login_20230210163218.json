@@ -1,0 +1,26 @@
+[
+    {
+        "images":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png",
+        "name":"Aram",
+        "lastname":"Hakobyan",
+        "mutualFriends":27
+    },
+    {
+        "images":"https://www.lifepng.com/wp-content/uploads/2020/11/Female-User-Icon-png-hd.png",
+        "name":"Donara",
+        "lastname":"Adamyan",
+        "mutualFriends":17
+    },
+    {
+        "images":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png",
+        "name":"Raffi",
+        "lastname":"Barseghyan",
+        "mutualFriends":20
+    },
+    {
+        "images":"https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png",
+        "name":"Raffi",
+        "lastname":"Barseghyan",
+        "mutualFriends":20
+    }
+]
