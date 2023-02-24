@@ -22,14 +22,12 @@ const LOGIN_TEXT = "Login";
  * @param riveProps
  */
 const LoginFormComponent = (riveProps = {}) => {
-
   const { t, i18n } = useTranslation();
 
   const onChange = (event) => {
     i18next.changeLanguage(event.target.value);
     localStorage.setItem("lang", event.target.value);
   };
-
 
   const { rive: riveInstance, RiveComponent } = useRive({
     src: "2244-4437-animated-login-screen.riv",
@@ -43,10 +41,9 @@ const LoginFormComponent = (riveProps = {}) => {
   });
   const [userValue, setUserValue] = useState("");
   const [passValue, setPassValue] = useState("");
-  const [data, setData] = useState([]);
 
   const [inputLookMultiplier, setInputLookMultiplier] = useState(0);
-  const [loginButtonText, setLoginButtonText] = useState(LOGIN_TEXT);
+  const [loginButtonText, setLoginButtonText] = useState(userValue);
   const inputRef = useRef(null);
 
   const isCheckingInput = useStateMachineInput(
@@ -98,32 +95,6 @@ const LoginFormComponent = (riveProps = {}) => {
     }
   };
 
-  const login = (evt) => {
-    evt.preventDefault();
-    const fd = new FormData();
-    fd.append("email", userValue);
-    fd.append("password", passValue);
-
-    axios.post("http://barmatoys.loc/api/login", fd).then((res) => {
-      if (res["data"]["status"] === "error") {
-        Swal.fire({
-          title: "OPPS",
-          text: "Error",
-          type: "warning",
-        });
-      } else {
-        Swal.fire({
-          title: "WOW",
-          text: "You have been logged-in successfully",
-          type: "success",
-        });
-
-
-      }
-      // this.myFormRef.reset();
-    });
-  };
-
   function errors(message) {
     return Swal.fire({
       position: "center",
@@ -135,15 +106,46 @@ const LoginFormComponent = (riveProps = {}) => {
   }
 
   const onSubmit = (e) => {
-    setLoginButtonText("Checking...");
-    setTimeout(() => {
-      setLoginButtonText(LOGIN_TEXT);
-      passValue == LOGIN_PASSWORD
-        ? trigSuccessInput.fire()
-        : trigFailInput.fire();
-    }, 1500);
-    e.preventDefault();
-    return false;
+    // setLoginButtonText("Checking...");
+    // setTimeout(() => {
+    //   setLoginButtonText(userValue);
+    //   passValue == passValue ? trigSuccessInput.fire() : trigFailInput.fire();
+    // }, 1500);
+    // e.preventDefault();
+    // return false;
+  };
+
+  const login = (evt) => {
+    evt.preventDefault();
+    const fd = new FormData();
+    fd.append("email", userValue);
+    fd.append("password", passValue);
+
+    axios.post("http://barmatoys.loc/api/login", fd).then((res) => {
+      if (res["data"]["status"] === "error") {
+        setLoginButtonText("Checking...");
+        setTimeout(() => {
+          setLoginButtonText('');
+          passValue == undefined ? trigSuccessInput.fire() : trigFailInput.fire();
+        }, 1500);
+        evt.preventDefault();
+        return false;
+      } else {
+        window.localStorage.setItem("loginEmail", userValue);
+        setLoginButtonText("Checking...");
+        setTimeout(() => {
+          setLoginButtonText(userValue);
+          passValue == passValue ? trigSuccessInput.fire() : trigFailInput.fire();
+        }, 1500);
+        setTimeout(() => {
+          window.location.replace("http://localhost:3000/");
+        }, 2000);
+        evt.preventDefault();
+        return false;
+       
+      }
+      // this.myFormRef.reset();
+    });
   };
 
   return (
@@ -180,7 +182,7 @@ const LoginFormComponent = (riveProps = {}) => {
               />
             </label>
             <button onClick={login} className="login-btn">
-              {loginButtonText}
+              {t("Signin")}
             </button>
           </form>
         </div>
@@ -190,5 +192,3 @@ const LoginFormComponent = (riveProps = {}) => {
 };
 
 export default LoginFormComponent;
-
-

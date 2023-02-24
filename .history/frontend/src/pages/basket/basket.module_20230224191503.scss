@@ -1,0 +1,23 @@
+.alsoLikeBg{
+    height: 700px;
+    background-image: url("../../assets/images/alsoLikeBg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    top: 100px;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.h2{
+    width: 445px;
+    height: 75px;
+    background-image: url("../../assets/images/h2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: 50px;
+
+}

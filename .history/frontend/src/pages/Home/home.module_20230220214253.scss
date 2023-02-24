@@ -1,0 +1,336 @@
+@import "../../assets/styles/variables.scss";
+
+@font-face {
+  font-family: "vag-rounded-std-bold";
+  src: url("../../assets/fonts/VAGRoundedStd-Bold.otf") format("truetype");
+}
+
+@font-face {
+  font-family: meka;
+  src: url("../../assets/fonts/BrabionU-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: tahoma-bold;
+  src: url("../../assets/fonts/ofont.ru_Tahoma.ttf") format("truetype");
+}
+@font-face {
+  font-family: Billy;
+  src: url("../../assets/fonts/BillyBolt.ttf") format("truetype");
+}
+
+.add_to_cart {
+  --color: #000;
+  --background: #fff;
+  --drop: #38e739;
+  --background-s: 1;
+  --text-o: 1;
+  --text-x: 10px;
+  --bottle-x: -40%;
+  --bottle-y: -60px;
+  --bottle-s: 0.4;
+  --bottle-r: edeg;
+  --bottle-o: 0;
+  --cart-x: -57px;
+  --cart-y: -2px;
+  --cart-r: edeg;
+  --cart-s: 0.8;
+  --check-y: 0px;
+  --check-s: 0;
+  --check-offset: 8.5px;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-appearance: none;
+  outline: none;
+  outline: none;
+  background: none;
+  border: none;
+  padding: 12px 0;
+  margin: 0;
+  width: 142px;
+  color: var(--color);
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  font: inherit;
+}
+.add_to_cart.clipped {
+  clip-path: polygon (e -80 px, 100% -80px, 100% 80px, e 80px);
+}
+.add_to_cart .background,
+.add_to_cart .cart,
+.add_to_cart .check {
+  position: absolute;
+  pointer-events: none;
+}
+.add_to_cart .background {
+  left: 0;
+  top: -4px;
+  right: 0;
+  bottom: 0;
+  display: block;
+  fill: var(--background);
+  transform: scale (var (--background-s)) translateZ(0);
+}
+.add_to_cart span {
+  position: relative;
+  z-index: 1;
+  line-height: 18px;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  opacity: var(--text-o);
+  transform: translateX(var(--text-x)) translatez(0);
+}
+.add_to_cart .drop {
+  position: absolute;
+  z-index: 1;
+  left: 70px;
+  top: 8px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--drop);
+}
+.add_to_cart .cart {
+  z-index: 2;
+  bottom: 11px;
+  left: calc(50% - 2px);
+  transform-origin: 10px 17px;
+  transform: translate(var(--cart-x), var(--cart-y)) scale(var(--cart-s))
+    rotate(var(--cart-r)) translatez(0);
+}
+.add_to_cart .cart svg {
+  display: block;
+  width: 24px;
+  height: 19px;
+  stroke: var(--color);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  position: relative;
+  z-index: 1;
+  transform: translateZ(0);
+}
+.add_to_cart .cart img {
+  display: block;
+  position: absolute;
+  bottom: 7px;
+  left: 50%;
+  opacity: var(--bottle-o);
+  transform-origin: 50% 100%;
+  transform: translate(var (--bottle-x), var(--bottle-y)) scale(var(--bottle-s))
+    rotate(var(--bottle-r)) translateZ(0);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bigBox {
+  background-color: #fff !important;
+  padding-bottom: 588px;
+}
+
+.bigbigBox {
+  background-image: url("../../assets/images/hp-season-of-wonder-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (min-width: 1200px) {
+  .bigBox {
+    max-width: 1140px;
+  }
+}
+
+////////////////////////////////////////
+
+.basketButtonBasket {
+  width: 279px;
+  height: 367.4px;
+  border: none;
+  background-color: #383a4200;
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  right: 0;
+}
+
+.button1 > div {
+  font-size: 16px;
+  overflow: hidden;
+  flex: 1;
+  margin-left: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 700;
+  color: #000;
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif;
+}
+
+.itemName {
+  margin: 20px 0 !important;
+  text-align: center;
+  font-size: 16px;
+  color: #444;
+}
+
+.itemName > div > div {
+  margin-left: 0 !important;
+}
+
+.box {
+  width: 176px;
+  height: 176px;
+  background-color: #383a42;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 60px;
+}
+
+.box1 {
+  width: 74px;
+  height: 74px;
+  background-color: #383a42;
+  border: 3.74px solid #eaeaea;
+  border-radius: 9.34px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 0;
+}
+
+.box1:hover {
+  border: 3.74px solid $color-red;
+  cursor: pointer;
+}
+.boxH2 {
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif;
+  font-style: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-blue1;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.boxP {
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  color: $color-red;
+}
+
+.swiperTitle {
+  font-family: Billy, tahoma-bold, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 36px;
+  text-align: center;
+  text-transform: capitalize;
+  color: $color-green;
+  white-space: normal !important;
+  padding-top: 50px;
+}
+
+.basketButton {
+  width: 140px;
+  min-height: 50px;
+  background: $color-green;
+  border-radius: 10px;
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  transition: 0.5s;
+}
+
+.prodName {
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif !important;
+  font-size: 28px !important;
+  color: $color-blue1 !important;
+  letter-spacing: 0.065rem !important;
+  text-transform: capitalize;
+}
+
+.imageChangeBtn {
+  width: 74px;
+  height: 74px;
+  background-color: #383a4200;
+  border: 3.74px solid #eaeaea;
+  border-radius: 9.34px;
+}
+
+.imageChangeBtn:hover {
+  background-color: #383a4200;
+  border: 3.74px solid $color-red;
+  border-radius: 9.34px;
+}
+
+.boxImageChange {
+  width: 457px;
+  height: 457px;
+}
+
+.saveBasket {
+  min-width: 210px;
+  min-height: 50px;
+  background-color: $color-green;
+}
+
+.saveBasket:hover {
+  background-color: $color-red !important;
+}
+
+.cradlesBox {
+  width: 210px;
+  height: 50px;
+  border: 3.74px solid #eaeaea;
+  border-radius: 9.34px;
+}
+
+.cradlesBigBox b {
+  background-color: #00000000 !important;
+  border: none !important;
+  color: $color-blue1 !important;
+  font-size: 20px;
+}
+
+.cradlesBigBox i {
+  background-color: $color-blue1 !important;
+}
+
+.cradlesBigBox i:hover {
+  cursor: pointer;
+}
+.cradlesBigBox input {
+  color: $color-blue !important;
+  font-size: 18px !important;
+}
+
+.minus {
+  width: 20px;
+  height: 50px;
+  font-size: 25px;
+  color: $color-blue1;
+}
+
+.minus:hover {
+  color: $color-blue;
+  cursor: pointer;
+}
+
+.cradlesInp {
+  border: none;
+}

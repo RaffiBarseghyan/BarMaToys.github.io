@@ -1,0 +1,396 @@
+
+.button {
+  --background: #362a89;
+  --text: #fff;
+  --cart: #fff;
+  --tick: var(--background);
+  position: relative;
+  border: none;
+  background: none;
+  padding: 8px 28px;
+  border-radius: 8px;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+  overflow: hidden;
+  cursor: pointer;
+  text-align: center;
+  min-width: 144px;
+  color: var(--text);
+  background: var(--background);
+  transform: scale(var(--scale, 1));
+  transition: transform 0.4s cubic-bezier(0.36, 1.01, 0.32, 1.27);
+  &:active {
+    --scale: 0.95;
+  }
+  span {
+    font-size: 14px;
+    font-weight: 500;
+    display: block;
+    position: relative;
+    padding-left: 24px;
+    margin-left: -8px;
+    line-height: 26px;
+    transform: translateY(var(--span-y, 0));
+    transition: transform 0.7s ease;
+    &:before,
+    &:after {
+      content: "";
+      width: var(--w, 2px);
+      height: var(--h, 14px);
+      border-radius: 1px;
+      position: absolute;
+      left: var(--l, 8px);
+      top: var(--t, 6px);
+      background: currentColor;
+      transform: scale(0.75) rotate(var(--icon-r, 0deg))
+        translateY(var(--icon-y, 0));
+      transition: transform 0.65s ease 0.05s;
+    }
+    &:after {
+      --w: 14px;
+      --h: 2px;
+      --l: 2px;
+      --t: 12px;
+    }
+  }
+  .cart {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -13px 0 0 -18px;
+    transform-origin: 12px 23px;
+    transform: translateX(-120px) rotate(-18deg);
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+    }
+    &:before {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      box-shadow: inset 0 0 0 2px var(--cart);
+      bottom: 0;
+      left: 9px;
+      filter: drop-shadow(11px 0 0 var(--cart));
+    }
+    &:after {
+      width: 16px;
+      height: 9px;
+      background: var(--cart);
+      left: 9px;
+      bottom: 7px;
+      transform-origin: 50% 100%;
+      transform: perspective(4px) rotateX(-6deg) scaleY(var(--fill, 0));
+      transition: transform 1.2s ease var(--fill-d);
+    }
+    svg {
+      z-index: 1;
+      width: 36px;
+      height: 26px;
+      display: block;
+      position: relative;
+      fill: none;
+      stroke: var(--cart);
+      stroke-width: 2px;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      polyline {
+        &:last-child {
+          stroke: var(--tick);
+          stroke-dasharray: 10px;
+          stroke-dashoffset: var(--offset, 10px);
+          transition: stroke-dashoffset 0.4s ease var(--offset-d);
+        }
+      }
+    }
+  }
+  &.loading {
+    --scale: 0.95;
+    --span-y: -32px;
+    --icon-r: 180deg;
+    --fill: 1;
+    --fill-d: 0.8s;
+    --offset: 0;
+    --offset-d: 1.73s;
+    .cart {
+      animation: cart 3.4s linear forwards 0.2s;
+    }
+  }
+}
+
+@keyframes cart {
+  12.5% {
+    transform: translateX(-60px) rotate(-18deg);
+  }
+  25%,
+  45%,
+  55%,
+  75% {
+    transform: none;
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  44%,
+  56% {
+    transform-origin: 12px 23px;
+  }
+  45%,
+  55% {
+    transform-origin: 50% 50%;
+  }
+  87.5% {
+    transform: translateX(70px) rotate(-18deg);
+  }
+  100% {
+    transform: translateX(140px) rotate(-18deg);
+  }
+}
+
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: inherit;
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+.bigBox {
+  background-color: #fff !important;
+  padding-bottom: 588px;
+}
+
+.bigbigBox {
+  background-image: url("../../assets/images/hp-season-of-wonder-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (min-width: 1200px) {
+  .bigBox {
+    max-width: 1140px;
+  }
+}
+
+////////////////////////////////////////
+
+.basketButtonBasket {
+  width: 140px;
+  min-height: 50px;
+  background: green;
+  border-radius: 10px;
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  transition: 0.5s;
+
+  position: absolute;
+  z-index: 5;
+  bottom: 0;
+  right: 71px;
+}
+
+.button1 > div {
+  font-size: 16px;
+  overflow: hidden;
+  flex: 1;
+  margin-left: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 700;
+  color: #000;
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif;
+}
+
+.itemName {
+  margin: 20px 0 !important;
+  text-align: center;
+  font-size: 16px;
+  color: #444;
+}
+
+.itemName > div > div {
+  margin-left: 0 !important;
+}
+
+.box {
+  width: 176px;
+  height: 176px;
+  background-color: #383a42;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 60px;
+}
+
+.box1 {
+  width: 74px;
+  height: 74px;
+  background-color: #383a42;
+  border: 3.74px solid #eaeaea;
+  border-radius: 9.34px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 0;
+}
+
+.box1:hover {
+  border: 3.74px solid $color-red;
+  cursor: pointer;
+}
+.boxH2 {
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif;
+  font-style: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: #0000ff;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.boxP {
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  color: $color-red;
+  margin-bottom: 60px;
+}
+
+.swiperTitle {
+  font-family: Billy, tahoma-bold, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 36px;
+  text-align: center;
+  text-transform: capitalize;
+  color: $color-green;
+  white-space: normal !important;
+  padding-top: 50px;
+}
+
+// .basketButton {
+//   width: 140px;
+//   min-height: 50px;
+//   background: $color-green;
+//   border-radius: 10px;
+//   font-family: vag-rounded-std-bold, tahoma-bold, sans-serif;
+//   font-style: normal;
+//   font-weight: 400;
+//   color: #ffffff;
+//   border: none;
+//   font-size: 16px;
+//   transition: 0.5s;
+// }
+
+.basketButtonBasket:hover {
+  background-color: $color-red;
+  transition: 0.5s;
+}
+
+.prodName {
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif !important;
+  font-size: 28px !important;
+  color: #0000ff !important;
+  letter-spacing: 0.065rem !important;
+  text-transform: capitalize;
+}
+
+.imageChangeBtn {
+  width: 74px;
+  height: 74px;
+  background-color: #383a4200;
+  border: 3.74px solid #eaeaea;
+  border-radius: 9.34px;
+}
+
+.imageChangeBtn:hover {
+  background-color: #383a4200;
+  border: 3.74px solid $color-red;
+  border-radius: 9.34px;
+}
+
+.boxImageChange {
+  width: 457px;
+  height: 457px;
+}
+
+.saveBasket {
+  min-width: 210px;
+  min-height: 50px;
+  background-color: $color-green;
+}
+
+.saveBasket:hover {
+  background-color: $color-red !important;
+}
+
+.cradlesBox {
+  width: 210px;
+  height: 50px;
+  border: 3.74px solid #eaeaea;
+  border-radius: 9.34px;
+}
+
+.cradlesBigBox b:hover{
+  cursor: pointer !important;
+}
+
+.cradlesBigBox b {
+  background-color: #00000000 !important;
+  border: none !important;
+  color: #0000ff !important;
+  font-size: 20px;
+}
+
+.cradlesBigBox i {
+  background-color: #0000ff !important;
+}
+
+.cradlesBigBox i:hover {
+  cursor: pointer;
+}
+.cradlesBigBox input {
+  color: $color-blue !important;
+  font-size: 18px !important;
+}
+
+.minus {
+  width: 20px;
+  height: 50px;
+  font-size: 25px;
+  color: #0000ff;
+}
+
+.minus:hover {
+  color: $color-blue;
+  cursor: pointer;
+}
+
+.cradlesInp {
+  border: none;
+}

@@ -7,7 +7,6 @@ import Home from "./pages/Home/home";
 import LoginFormComponent from "./pages/auth/login";
 import Register from "./pages/auth/register";
 import Footer from "./pages/footer/footer";
-import Shipping from "./pages/auth/shipping";
 
 function App() {
   return (

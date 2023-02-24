@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import i18next from "i18next";
 import {
   MDBBtn,
   MDBContainer,
@@ -18,8 +19,16 @@ import ButtonIcon from "../../components/button/button";
 import Swal from "sweetalert2";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import { useTranslation } from "react-i18next";
 
 export default function Register() {
+  const { t, i18n } = useTranslation();
+
+  const onChange = (event) => {
+    i18next.changeLanguage(event.target.value);
+    localStorage.setItem("lang", event.target.value);
+  };
+
   const [name, setname] = useState("");
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
@@ -169,7 +178,10 @@ export default function Register() {
       setcity("");
       setpostal("");
       setphone("");
-
+      window.localStorage.setItem("loginEmail", email);
+      setTimeout(() => {
+        window.location.replace("http://localhost:3000/");
+      }, 1000);
       Swal.fire({
         title: "Success",
         text: "You have been register-in successfully",
@@ -181,18 +193,19 @@ export default function Register() {
     <MDBContainer>
       <MDBCard className="text-black p-5" style={{ borderRadius: "25px" }}>
         <MDBCardBody>
+          <MDBRow>
+            <p
+              className={`text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4 ${style.p}`}
+            >
+              {t("Register")}
+            </p>
+          </MDBRow>
           <MDBRow className="d-flex  justify-content-center">
             <MDBCol
               md="10"
               lg="6"
               className="order-2 order-lg-1 d-flex flex-column align-items-center"
             >
-              <p
-                className={`text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4 ${style.p}`}
-              >
-                Sign up
-              </p>
-
               <div
                 className={`d-flex flex-row align-items-center mb-4 ${style.md_textbox}`}
               >
@@ -204,7 +217,7 @@ export default function Register() {
                   type="email"
                   value={name}
                 />
-                <label htmlFor="textbox1">Your Name</label>
+                <label htmlFor="textbox1">{t("YourName")}</label>
               </div>
 
               <div
@@ -218,7 +231,7 @@ export default function Register() {
                   type="email"
                   value={email}
                 />
-                <label htmlFor="textbox2">Your Email</label>
+                <label htmlFor="textbox2">{t("YourEmail")}</label>
               </div>
 
               <div
@@ -235,7 +248,7 @@ export default function Register() {
                   type="password"
                   value={password}
                 />
-                <label htmlFor="textbox3">Your Password</label>
+                <label htmlFor="textbox3">{t("YourPassword")}</label>
               </div>
 
               <div
@@ -252,7 +265,7 @@ export default function Register() {
                   type="password"
                   value={passwordRep}
                 />
-                <label htmlFor="textbox4">Repeat your password</label>
+                <label htmlFor="textbox4">{t("Repeatyourpassword")}</label>
               </div>
             </MDBCol>
 
@@ -261,11 +274,7 @@ export default function Register() {
               lg="6"
               className="order-1 order-lg-2 d-flex flex-column align-items-center"
             >
-              <p
-                className={`text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4 ${style.p}`}
-              >
-                Customer Info
-              </p>
+              
               <div className="d-flex flex-column align-items-center">
                 <div className="d-flex flex-column align-items-center">
                   <div
@@ -273,9 +282,10 @@ export default function Register() {
                   >
                     <MDBIcon fas icon="envelope me-3" size="lg" />
                     <input
-                    
                       onChange={addressChange}
-                      className={`${address ? `${style.has_value}` : ""} ${addressErr} `}
+                      className={`${
+                        address ? `${style.has_value}` : ""
+                      } ${addressErr} `}
                       id="street-address"
                       type="email"
                       value={address}
@@ -284,7 +294,7 @@ export default function Register() {
                       required
                       enterKeyHint="next"
                     />
-                    <label htmlFor="street-address">Street address</label>
+                    <label htmlFor="street-address">{t("StreetAddress")}</label>
                   </div>
 
                   <div
@@ -293,7 +303,9 @@ export default function Register() {
                     <MDBIcon fas icon="envelope me-3" size="lg" />
                     <select
                       onChange={countryChange}
-                      className={`${country ? `${style.has_value}` : ""} ${countryErr}`}
+                      className={`${
+                        country ? `${style.has_value}` : ""
+                      } ${countryErr}`}
                       id="country"
                       type="email"
                       value={country}
@@ -557,7 +569,7 @@ export default function Register() {
                       <option value="ZM">Zambia</option>
                       <option value="ZW">Zimbabwe</option>
                     </select>
-                    <label htmlFor="country">Country or region</label>
+                    <label htmlFor="country">{t("CountryOrRegion")}</label>
                   </div>
 
                   <div
@@ -566,7 +578,9 @@ export default function Register() {
                     <MDBIcon fas icon="envelope me-3" size="lg" />
                     <input
                       onChange={cityChange}
-                      className={`${city ? `${style.has_value}` : ""} ${cityErr}`}
+                      className={`${
+                        city ? `${style.has_value}` : ""
+                      } ${cityErr}`}
                       id="city"
                       type="text"
                       value={city}
@@ -575,7 +589,7 @@ export default function Register() {
                       required
                       enterKeyHint="next"
                     />
-                    <label htmlFor="city">City</label>
+                    <label htmlFor="city">{t("City")}</label>
                   </div>
 
                   <div
@@ -584,7 +598,9 @@ export default function Register() {
                     <MDBIcon fas icon="envelope me-3" size="lg" />
                     <input
                       onChange={postalChange}
-                      className={`${postal ? `${style.has_value}` : ""} ${postalErr}`}
+                      className={`${
+                        postal ? `${style.has_value}` : ""
+                      } ${postalErr}`}
                       id="postal-code"
                       type="text"
                       value={postal}
@@ -593,7 +609,7 @@ export default function Register() {
                       required
                       enterKeyHint="next"
                     />
-                    <label htmlFor="postal-code">ZIP or postal code</label>
+                    <label htmlFor="postal-code">{t("ZIPOrPostalCode")}</label>
                   </div>
 
                   <PhoneInput
@@ -606,7 +622,6 @@ export default function Register() {
                     specialLabel={""}
                     country={"am"}
                     className={style.phone}
-                    
                   />
                 </div>
               </div>
@@ -614,12 +629,12 @@ export default function Register() {
           </MDBRow>
 
           <MDBRow className="d-flex flex-column align-items-center mt-5">
-            <div className="mb-4" style={{ width: "242px" }}>
+            <div className="mb-4" style={{ width: "170px" }}>
               <MDBCheckbox
                 name="flexCheck"
                 value={change}
                 id="flexCheckDefault"
-                label="Subscribe to our newsletter"
+                label={t("rememberMe")}
                 onChange={checkChange}
               />
             </div>
@@ -628,7 +643,7 @@ export default function Register() {
               className={`mb-4 ${style.btn_icon}`}
               size="lg"
             >
-              Register
+              {t("Register")}
             </button>
           </MDBRow>
         </MDBCardBody>
