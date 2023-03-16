@@ -35,8 +35,20 @@
   margin-bottom: 20px;
 }
 
-.basketButton {
-  width: 90px;
+.basketButtonUp {
+  min-width: 90px;
+  min-height: 40px;
+  border-radius: 10px;
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+}
+
+.basketButtonDe {
+  min-width: 70px;
   min-height: 40px;
   border-radius: 10px;
   font-family: vag-rounded-std-bold, tahoma-bold, sans-serif;

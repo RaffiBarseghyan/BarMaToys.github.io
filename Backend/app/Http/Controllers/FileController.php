@@ -29,6 +29,21 @@ class FileController extends Controller
 
     }
 
+    public function sendFileUpd(Request $req, $id)
+    {
+
+        $data = new Files();
+
+        $name = $req->file('files')->getClientOriginalName();
+        $req->file('files')->storeAs('uploads', $name, 'public');
+        $destinationPath =  'storage/uploads';
+        $req->file('files')->move($destinationPath, $name);
+        $data->image = $name;
+        $data->prodId = $id ;
+        $data->save();
+
+    }
+
     public function getFile()
     {
         return response()->json(

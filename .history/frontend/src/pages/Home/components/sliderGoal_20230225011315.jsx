@@ -85,7 +85,7 @@ function SliderGoal({ data, file, text }) {
                 <Link
                   className={`navbar-brand ${style.linkStyle}`}
                   to='/toy'
-                  state={{ from: item. }}
+                  state={{ from: item.id }}
                 >
                   <h2 className={style.boxH2}>{item.name}</h2>
                   <p className={style.boxP}>

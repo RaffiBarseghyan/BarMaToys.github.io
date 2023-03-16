@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-
+import Delete from "../UpDe/Delete";
+import style from "../Home/Home.module.scss";
 export default function Users() {
   const [user, setUser] = useState([]);
 
@@ -25,6 +26,8 @@ export default function Users() {
             <th scope="col">Country</th>
             <th scope="col">Postal code</th>
             <th scope="col">Phone</th>
+            <th scope="col">Delete</th>
+           
           </tr>
         </thead>
         <tbody>
@@ -40,6 +43,13 @@ export default function Users() {
                 <th>{item.country}</th>
                 <th>{item.postal}</th>
                 <th>{item.phone}</th>
+
+                <th>
+                  <button className={`${style.basketButtonDe} btn btn-danger `}>
+                    <Delete id={item.id} req="user" />
+                  </button>
+                </th>
+                
               </tr>
             );
           })}

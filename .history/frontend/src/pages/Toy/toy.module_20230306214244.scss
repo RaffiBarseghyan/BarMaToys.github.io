@@ -1,0 +1,191 @@
+@import "../../assets/styles/variables.scss";
+
+@font-face {
+  font-family: "vag-rounded-std-bold";
+  src: url("../../assets/fonts/VAGRoundedStd-Bold.otf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: tahoma-bold;
+  src: url("../../assets/fonts/ofont.ru_Tahoma.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+Claire Hand
+.boxImageChange {
+  width: 457px;
+  height: 457px;
+}
+
+.box1 {
+  width: 74px;
+  height: 74px;
+  background-color: #383a42;
+  border: none;
+  border-radius: 9.34px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 0;
+}
+
+.box1:hover {
+  border: none;
+  cursor: pointer;
+}
+
+.imageChangeBtn {
+  width: 74px;
+  height: 74px;
+  background-color: #383a4200;
+  border: 3.74px solid #eaeaea;
+  border-radius: 9.34px;
+}
+
+.imageChangeBtn:hover {
+  background-color: #383a4200;
+  border: 3.74px solid red !important;
+  border-radius: 9.34px;
+}
+
+.swiperTitle {
+  font-family: Billy, tahoma-bold, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 36px;
+  text-align: center;
+  text-transform: capitalize;
+  color: green;
+  white-space: normal !important;
+  padding-top: 50px;
+}
+
+.itemName {
+  margin: 20px 0 !important;
+  text-align: center;
+  font-size: 16px;
+  color: #444;
+}
+
+.itemName > div > div {
+  margin-left: 0 !important;
+}
+
+.name {
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 1.04px;
+  color: #407ec9;
+}
+
+.rightBox p {
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 24px;
+  color: #407ec9;
+}
+
+.rightBox h3 {
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: #323232;
+}
+
+.rightBox h4 {
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  color: red;
+}
+
+.basketButtonUp {
+  width: 200px;
+  height: 60px;
+}
+
+.cradlesBox {
+  width: 210px;
+  height: 50px;
+  border: 3.74px solid #eaeaea;
+  border-radius: 9.34px;
+}
+
+.saveBasket {
+  min-width: 210px;
+  min-height: 50px;
+  background-color: $color-green;
+}
+
+.saveBasket:hover {
+  background-color: $color-red !important;
+}
+
+
+//Section 2
+
+@import "../../assets/styles/variables.scss";
+
+@font-face {
+  font-family: "vag-rounded-std-bold";
+  src: url("../../assets/fonts/VAGRoundedStd-Bold.otf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: tahoma-bold;
+  src: url("../../assets/fonts/ofont.ru_Tahoma.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+.alsoLikeBg {
+  height: 700px;
+  background-image: url("../../assets/images/alsoLikeBg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  top: 100px;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.h2 {
+  width: 445px;
+  height: 75px;
+  background-image: url("../../assets/images/h2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: 50px;
+  
+  font-family: 'Claire Hand Bold', Arial, Helvetica, sans-serif !important;;
+  font-style: normal;
+  font-size: 22px;
+  line-height: 62px;
+
+  text-align: center;
+  letter-spacing: 1.04px;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+
+.section3Bigbox{
+  background-color: #F8F8F8;
+}

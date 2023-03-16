@@ -6,6 +6,8 @@ import Header from "./header/header";
 import Create from "./Create/Create";
 import Users from "./Users/Users";
 import Home from "./Home/Home";
+import Update from "./UpDe/Update";
+import ConfirmCreate from "./Create/ConfirmCreate";
 
 
 
@@ -19,6 +21,8 @@ function App() {
             <Route path="/create" element={<Create />} />
             <Route path="/users" element={<Users />} />
             <Route path="/" element={<Home />} />
+            <Route path="/update" element={<Update />} />
+            <Route path="/confirmcreate" element={<ConfirmCreate />} />
 
         </Routes>
 

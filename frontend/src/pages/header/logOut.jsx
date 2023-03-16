@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from "react";
 import style from "./header.module.scss";
-import axios, { Axios } from "axios";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import Swal from "sweetalert2";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { AiOutlineLogout } from "react-icons/ai";
 
 export default function Logout(id) {
   const [show, setShow] = useState(false);
-  const [toy, setToy] = useState([]);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -21,35 +18,6 @@ export default function Logout(id) {
     window.localStorage.removeItem("loginEmail");
     window.location.reload();
   };
-  //   useEffect(() => {
-  //     axios.get(`http://barmatoys.loc/api/get/alltoy`).then((res) => {
-  //       const persons = res.data;
-  //       setToy(persons.data);
-  //     });
-  //   }, []);
-
-  // const [name, setname] = useState("");
-
-  // const nameval = (evt) => {
-  //   setname(evt.target.value);
-  // };
-
-  // const send = () => {
-  //   let formData = new FormData();
-  //   formData.append("name", name);
-
-  //   axios.post(`http://practikar:127//api/create/alarm`, formData);
-
-  //   setname("");
-
-  //   Swal.fire({
-  //     position: "center",
-  //     icon: "success",
-  //     title: `Success`,
-  //     showConfirmButton: false,
-  //     timer: 1500,
-  //   });
-  // };
 
   return (
     <div id="asdasdasd">
