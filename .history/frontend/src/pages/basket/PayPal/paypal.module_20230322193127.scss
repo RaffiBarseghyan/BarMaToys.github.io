@@ -1,0 +1,84 @@
+.pay {
+  width: 330px;
+  height: 56px;
+  background: #54adff;
+  border-radius: 6px;
+  font-family: "Saira";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 38px;
+  color: #ffffff;
+  border: none;
+  margin-top: 200px;
+  margin-bottom: 200px;
+}
+
+.more {
+  background: #4a4d5646 !important;
+  border-radius: 24px !important;
+  border: none !important;
+  padding-left: 0 !important;
+  width: 100% !important;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.moreBody {
+  background: #4a4d56 !important;
+  border: none !important;
+}
+
+.itemName {
+  font-family: "Saira";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 47px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-align: center;
+}
+.button1 {
+  background: #4a4d56 !important;
+  border-bottom: 2px solid #9d9d9d;
+  font-family: "Saira";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 38px;
+  line-height: 60px;
+  text-transform: capitalize;
+  color: #ffffff !important;
+}
+
+.checkout {
+  width: 288.42px;
+  height: 50px;
+  background: #e82416;
+  box-shadow: 0px 5px 0px #a7170c;
+  border-radius: 10px;
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 1.04px;
+  color: #ffffff !important;
+  transition: 0.5s;
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkout:hover {
+  box-shadow: 0px 0px 10px #e82416 !important;
+  transition: 0.5s;
+}
+
+.moreBody>div{
+    display: none;
+}
+
+.moreBody>div :first-child-childst{
+    display: block;
+}

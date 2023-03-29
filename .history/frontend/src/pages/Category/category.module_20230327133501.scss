@@ -1,0 +1,135 @@
+@import "../../assets/styles/variables.scss";
+
+.box {
+    width: 176px;
+    height: 176px;
+    background-color: #383a42;
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 60px;
+  }
+.search {
+  width: 350px;
+  height: 40px;
+  border-radius: 20px;
+  padding-left: 10px;
+}
+
+.searchHid {
+  position: absolute;
+  z-index: 4;
+  top: 20px;
+}
+
+.substr > h2 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 8rem;
+  margin-bottom: -0.4rem;
+  color: $color-blue;
+}
+
+.substr > p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 10rem;
+  color: $color-blue1;
+}
+
+.tumb::-webkit-scrollbar {
+  width: 20px;
+}
+
+.tumb::-webkit-scrollbar-track {
+  background-color: #ffffff00;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.tumb::-webkit-scrollbar-thumb {
+  background-color: $color-green;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.linkStyle > div {
+  background-color: #ffffff;
+}
+
+.searchPrice {
+  color: $color-red;
+}
+
+.searchListbg {
+  background-color: #e1e1e1;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.buttonCenter > div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.boxH2 {
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif;
+  font-style: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-blue1;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.boxP {
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  color: $color-red;
+  margin-bottom: 60px;
+}
+
+.price>input{
+  width: 150px;
+  height: 40px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+
+.accordionHeader{
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  color: $color-blue !important;
+}
+
+.colors>label{
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: $color-blue !important;
+}
+
+.colors>label>{
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: $color-blue !important;
+}

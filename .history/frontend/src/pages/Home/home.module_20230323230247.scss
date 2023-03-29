@@ -1,0 +1,337 @@
+@import "../../assets/styles/variables.scss";
+
+@font-face {
+  font-family: "vag-rounded-std-bold";
+  src: url("../../assets/fonts/VAGRoundedStd-Bold.otf") format("truetype");
+}
+
+@font-face {
+  font-family: meka;
+  src: url("../../assets/fonts/BrabionU-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: tahoma-bold;
+  src: url("../../assets/fonts/ofont.ru_Tahoma.ttf") format("truetype");
+}
+@font-face {
+  font-family: Billy;
+  src: url("../../assets/fonts/BillyBolt.ttf") format("truetype");
+}
+
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: inherit;
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bigBox {
+  background-color: #fff !important;
+  padding-bottom: 588px;
+}
+
+.bigbigBox {
+  background-image: url("../../assets/images/hp-season-of-wonder-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@media (min-width: 1200px) {
+  .bigBox {
+    max-width: 1140px;
+  }
+}
+
+////////////////////////////////////////
+
+.basketButtonBasket {
+  width: 140px;
+  min-height: 50px;
+  background: $color-green;
+  border-radius: 10px;
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  transition: 0.5s;
+  position: absolute;
+  z-index: 5;
+  bottom: 0;
+  left: auto;
+  right: auto;
+}
+
+.button1 > div {
+  font-size: 16px;
+  overflow: hidden;
+  flex: 1;
+  margin-left: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: 700;
+  color: #000;
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif;
+}
+
+.itemName {
+  margin: 20px 0 !important;
+  text-align: center;
+  font-size: 16px;
+  color: #444;
+}
+
+.itemName > div > div {
+  margin-left: 0 !important;
+}
+
+.box {
+  width: 176px;
+  height: 176px;
+  background-color: #383a42;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-top: 60px;
+}
+
+.box1 {
+  width: 74px;
+  height: 74px;
+  background-color: #383a42;
+  border: 3.74px solid #eaeaea;
+  border-radius: 9.34px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  padding: 0;
+}
+
+.box1:hover {
+  border: 3.74px solid $color-red;
+  cursor: pointer;
+}
+.boxH2 {
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif;
+  font-style: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: $color-blue1;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.boxP {
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  text-align: center;
+  color: $color-red;
+  margin-bottom: 60px;
+}
+
+.swiperTitle {
+  font-family: Billy, tahoma-bold, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 36px;
+  text-align: center;
+  text-transform: capitalize;
+  color: $color-green;
+  white-space: normal !important;
+  padding-top: 50px;
+}
+
+.moreBody {
+  min-height: 580px;
+}
+
+.basketButtonBasket:hover {
+  background-color: $color-red;
+  transition: 0.5s;
+}
+
+.prodName {
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif !important;
+  font-size: 28px !important;
+  color: $color-blue1 !important;
+  letter-spacing: 0.065rem !important;
+  text-transform: capitalize;
+}
+
+.imageChangeBtn {
+  width: 74px;
+  height: 74px;
+  background-color: #383a4200;
+  border: 3.74px solid #eaeaea;
+  border-radius: 9.34px;
+}
+
+.imageChangeBtn:hover {
+  background-color: #383a4200;
+  border: 3.74px solid $color-red;
+  border-radius: 9.34px;
+}
+
+.boxImageChange {
+  width: 457px;
+  height: 457px;
+}
+
+.saveBasket {
+  min-width: 210px;
+  min-height: 50px;
+  background-color: $color-green;
+}
+
+.saveBasket:hover {
+  background-color: $color-red !important;
+}
+
+.cradlesBox {
+  width: 210px;
+  height: 50px;
+  border: 3.74px solid #eaeaea;
+  border-radius: 9.34px;
+}
+
+.cradlesBigBox b:hover {
+  cursor: pointer !important;
+}
+
+.cradlesBigBox b {
+  background-color: #00000000 !important;
+  border: none !important;
+  color: $color-blue1 !important;
+  font-size: 20px;
+}
+
+.cradlesBigBox i {
+  background-color: $color-blue1 !important;
+}
+
+.cradlesBigBox i:hover {
+  cursor: pointer;
+}
+.cradlesBigBox input {
+  color: $color-blue !important;
+  font-size: 18px !important;
+}
+
+.cradlesBigBox {
+  margin-left: 20px;
+}
+
+.minus {
+  width: 20px;
+  height: 50px;
+  font-size: 25px;
+  color: $color-blue1;
+}
+
+.minus:hover {
+  color: $color-blue;
+  cursor: pointer;
+}
+
+.cradlesInp {
+  border: none;
+}
+
+.buttonCenter > div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.descriptionPrice {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.descriptionPrice > p:first-child {
+  color: $color-blue;
+  font-size: 26px;
+}
+
+.descriptionPrice > p {
+  color: $color-red;
+}
+
+.bgPosition {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.rightPart {
+  min-height: 300px;
+  flex: 0 0 50%;
+  max-width: 45%;
+}
+
+@media only screen and (max-width: 1199.2px) {
+  .itemName {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .rightPart {
+    min-height: 0px;
+    align-items: center;
+    flex: 0 0 50%;
+    max-width: 45%;
+  }
+  .descriptionPrice {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .moreBody {
+    min-height: 750px;
+  }
+  .cradlesBigBox {
+    margin-left: 0px;
+  }
+}
+
+@media only screen and (max-width: 991.6px) {
+  .boxImageChange {
+    width: 357px;
+    height: 357px;
+  }
+  .itemName {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .bgPosition {
+    flex: 0 0 50%;
+    max-width: 75%;
+  }
+  .rightPart {
+    min-height: 0px;
+    align-items: center;
+    flex: 0 0 50%;
+    max-width: 25%;
+  }
+}

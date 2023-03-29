@@ -1,0 +1,56 @@
+@import "../../../assets/styles/variables.scss";
+
+
+.box {
+  width: 76px;
+  height: 76px;
+  background-color: #383a42;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.search {
+  width: 350px;
+  border-radius: 20px;
+  padding-left: 10px;
+}
+
+.searchHid {
+  position: absolute;
+  z-index: 4;
+}
+
+.substr > h2 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 8rem;
+}
+
+.substr > p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 10rem;
+}
+
+.tumb::-webkit-scrollbar {
+  width: 20px;
+}
+
+.tumb::-webkit-scrollbar-track {
+ background-color: #00000026;
+}
+
+.tumb::-webkit-scrollbar-thumb {
+ background-color: $color-blue;
+}
+
+.linkStyle>div{
+    background-color: $co;
+}

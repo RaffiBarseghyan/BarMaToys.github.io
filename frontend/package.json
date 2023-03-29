@@ -39,6 +39,7 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "react-swal": "^4.0.0",
+    "react-table-filter": "^2.0.2",
     "react-tabs": "^6.0.0",
     "rive-react": "^3.0.33",
     "sass": "^1.54.0",

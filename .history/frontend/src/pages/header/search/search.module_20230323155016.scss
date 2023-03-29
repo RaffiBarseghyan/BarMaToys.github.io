@@ -1,0 +1,23 @@
+.box {
+  width: 76px;
+  height: 76px;
+  background-color: #383a42;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.search {
+  width: 350px;
+  border-top-right-radius: 0px !important;
+  border-bottom-right-radius: 0px !important;
+}
+
+.searchHid {
+  position: absolute;
+  z-index: 4;
+}

@@ -1,0 +1,185 @@
+@import "../../assets/styles/variables.scss";
+
+@font-face {
+  font-family: Billy;
+  src: url("../../assets/fonts/BillyBolt.ttf") format("truetype");
+}
+@font-face {
+  font-family: "vag-rounded-std-bold";
+  src: url("../../assets/fonts/VAGRoundedStd-Bold.otf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: tahoma-bold;
+  src: url("../../assets/fonts/ofont.ru_Tahoma.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.bgColor {
+  min-height: 86px;
+  background-color: $color-blue !important;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.linkStyle {
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif !important;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 41px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #ffffff !important;
+}
+
+.headerUl1 {
+  min-height: 105px;
+  display: flex;
+  align-items: center;
+}
+
+.language {
+  min-height: 40px;
+  margin-top: 10px;
+  color: #0d5d9c;
+  background-image: url("../../assets/images/Flag_of_Armenia.png");
+}
+
+.am {
+  height: 28px;
+  width: 35px;
+  margin-top: 15px;
+  color: #0d5e9c00;
+  background-image: url("../../assets/images/Flag_of_Armenia.png") !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover !important;
+  border: 1px solid #ced4da;
+  border-radius: 0.375rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  appearance: none;
+}
+
+.ru {
+  height: 28px;
+  width: 35px;
+  margin-top: 15px;
+  color: #0d5e9c00;
+  background-image: url("../../assets/images/Flag_of_Russia.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover !important;
+  border: 1px solid #ced4da;
+  border-radius: 0.375rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  appearance: none;
+}
+
+.en {
+  height: 28px;
+  width: 35px;
+  margin-top: 15px;
+  color: #0d5e9c00;
+  background-image: url("../../assets/images/Flag_of_the_United_States.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover !important;
+  border: 1px solid #ced4da;
+  border-radius: 0.375rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  appearance: none;
+}
+
+.bgColor1 {
+  background-color: $color-blue1 !important;
+  height: 60px !important;
+  margin-top: 86px;
+}
+
+.linkStyle1 {
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif !important;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 41px;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #ffffff !important;
+}
+
+.headerUl1 {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.linkStyle1 {
+  border-radius: 23px;
+  transition: 0.5s;
+}
+.linkStyle1:hover {
+  color: #407ec9 !important;
+  background-color: #fff;
+  transition: 0.5s;
+}
+
+.delivery {
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif !important;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 41px;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+
+.dropdownBlock {
+  display: none;
+}
+
+.dropdownLi:hover .dropdownBlock {
+  display: block;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+}
+
+@media only screen and (max-width: 640px) {
+  .search {
+    width: 250px;
+    height: 38px;
+  }
+  .dropdownLi > a,
+  .linkStyle1 {
+    font-family: vag-rounded-std-bold, tahoma-bold, sans-serif !important;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 41px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #ffffff !important;
+  }
+  .dropdownBlock > li {
+    padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x);
+    clear: both;
+    font-weight: 400;
+    color: #212529 !important;
+    text-align: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+  }
+  .linkStyle {
+    margin-top: 10px;
+  }
+}
