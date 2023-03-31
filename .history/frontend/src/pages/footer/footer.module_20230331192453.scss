@@ -1,0 +1,136 @@
+@import "../../assets/styles/variables.scss";
+
+@font-face {
+  font-family: "vag-rounded-std-bold";
+  src: url("../../assets/fonts/VAGRoundedStd-Bold.otf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: tahoma-bold;
+  src: url("../../assets/fonts/ofont.ru_Tahoma.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.footerBg {
+  width: 100%;
+  min-height: 500px;
+  background-image: url(../../assets/images/Footer.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-position-x: right;
+  background-position-y: top;
+  padding-right: 1px;
+  padding-top: 190px;
+  position: absolute;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+.follow img {
+  width: 14%;
+}
+
+.follow img:hover {
+  cursor: pointer;
+}
+
+.footerBg h3 {
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 20px;
+  color: #fff;
+}
+
+.footerBg li {
+  color: #ffffff;
+  font-size: 14px;
+  list-style: none;
+  margin-top: 20px;
+  font-family: sans-serif;
+}
+
+.footerBg li:hover {
+  cursor: pointer;
+}
+
+.footerBg ul {
+  padding: 0;
+}
+
+.accordion-item {
+  background-color: #ffffff00 !important;
+}
+
+.AccordionBody{
+  display: none;
+}
+
+.AccordionBody > div {
+  background-color: #ffffff00 !important;
+  border: none;
+}
+
+.accordionHeader button {
+  background-color: #ffffff00 !important;
+  border-bottom: 0px solid #fff !important;
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 20px;
+  color: #fff !important;
+  box-shadow:none !important;
+}
+
+
+
+
+.accordionHeader h2 {
+color: #ffffff !important;
+}
+
+
+.helpUl{
+  text-align: center;
+}
+
+
+@media only screen and (max-width: 1025.2px) {
+  .footerBg {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footerBg > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footerBg > div > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .follow > div {
+    text-align: center;
+  }
+  .follow img {
+    width: 15% !important;
+  }
+  .AccordionBody{
+    display: block;
+  }
+  .displayBlock{
+    d
+  }
+}

@@ -1,0 +1,136 @@
+@import "../../assets/styles/variables.scss";
+
+@font-face {
+  font-family: "vag-rounded-std-bold";
+  src: url("../../assets/fonts/VAGRoundedStd-Bold.otf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: tahoma-bold;
+  src: url("../../assets/fonts/ofont.ru_Tahoma.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+.md_textbox {
+  position: relative;
+}
+.md_textbox > input {
+  height: 56px;
+  width: 260px;
+  padding-left: 16px;
+  border: 2px solid #888888;
+  border-radius: 8px;
+  outline: none;
+  background: transparent;
+  color: #000000;
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif;
+  font-size: 16px;
+}
+
+
+.phone {
+  width: 260px !important;
+  height: 56px !important;
+  margin-left: 16px;
+}
+
+.btn_icon {
+  width: 140px;
+  min-height: 50px;
+  background: $color-blue1;
+  border-radius: 10px;
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #ffffff;
+  border: none;
+  font-size: 16px;
+  transition: 0.5s;
+}
+
+.btn_icon:hover {
+  background: $color-blue;
+  transition: 0.5s;
+}
+
+
+.phone > input {
+  height: 56px !important;
+  width: 260px !important;
+  border: 2px solid #888888 !important;
+  border-radius: 8px !important;
+  outline: none;
+  background: transparent;
+  color: #000000;
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif;
+  font-size: 16px;
+}
+
+.p {
+  font-family: vag-rounded-std-bold, tahoma-bold, sans-serif;
+}
+
+input[type="text"],
+input[type="password"] {
+  font-family: "Nunito", sans-serif;
+  font-size: 22px;
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+}
+
+.instructions {
+  font-size: 0.75rem;
+  border-radius: 0.5rem;
+  background: #000;
+  color: #fff;
+  padding: 0.25rem;
+  position: relative;
+  bottom: -10px;
+}
+
+.instructions > svg {
+  margin-right: 0.25rem;
+}
+
+.offscreen {
+  position: absolute;
+  left: -9999px;
+}
+
+.hide {
+  display: none;
+}
+
+.valid {
+  color: limegreen;
+  margin-left: 0.25rem;
+}
+
+.invalid {
+  color: red;
+  margin-left: 0.25rem;
+}
+
+.errmsg {
+  background-color: lightpink;
+  color: firebrick;
+  font-weight: bold;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.line {
+  display: inline-block;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1rem 0.5rem;
+}
